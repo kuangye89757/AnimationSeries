@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together">
+
+    <!--x属性300ms内到200-->
+    <objectAnimator
+        android:propertyName="x"
+        android:duration="3000"
+        android:valueTo="200"
+        android:valueType="intType"
+        />
+
+    <!--y属性300ms内到300-->
+    <objectAnimator
+        android:propertyName="y"
+        android:duration="3000"
+        android:valueTo="300"
+        android:valueType="intType"
+        />
+
+</set>

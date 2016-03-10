@@ -1,0 +1,17 @@
+buildscript {//设置脚本的运行环境
+    repositories {//支持java依赖库管理（maven/ivy等）,用于项目的依赖
+        jcenter()//推荐使用这个仓库
+    }
+    //依赖包的定义。支持maven/ivy、远程、本地库、单文件，前面定义了repositories{}jcenter库，使用jcenter的依赖只需要按照
+    //类似于com.android.tools.build:gradle:1.0.0-rc2，gradle就会自动的往远程库下载相应的依赖。
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+    }
+}
+
+//多项目的集中配置，多数构建工具，对于子项目的配置，都是基于继承的方式。Gradle除了提供继承方式设置子项目，还提供这种配置
+allprojects {
+    repositories {
+        jcenter()
+    }
+}

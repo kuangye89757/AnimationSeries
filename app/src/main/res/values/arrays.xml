@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="decorate">
+        <item>毛坯</item>
+        <item>简装</item>
+        <item>精装</item>
+        <item>豪装</item>
+    </string-array>
+</resources>
