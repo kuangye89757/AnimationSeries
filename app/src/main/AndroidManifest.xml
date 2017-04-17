@@ -21,4 +21,8 @@
         </activity>
     </application>
 
+    <!-- 友盟渠道 -->
+    <meta-data
+        android:name="UMENG_CHANNEL"
+        android:value="${UMENG_CHANNEL_VALUE}" />
 </manifest>
