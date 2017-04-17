@@ -21,7 +21,14 @@ android {
 
     signingConfigs {
         signingConfig {
-            storeFile file("..\\..\\..\\diaochan.jks")
+            //由于本地打包使用的是本机上的KeyStore
+            //而Jenkins打包用的是服务器上的KeyStore
+            //两个路径不一样
+            if("true".equals(IS_JENKINS)){
+                storeFile file(JENKINS_FILE_PATH)
+            }else {
+                storeFile file(STORE_FILE_PATH)
+            }
             storePassword '897577'
             keyAlias "diaochan"
             keyPassword '897577'
