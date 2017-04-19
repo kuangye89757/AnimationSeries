@@ -5,7 +5,6 @@ def getDate() {
     def formattedDate = date.format('yyyy-MM-dd-HH-mm')
     return formattedDate
 }
-def verCode = 1
 
 android {
     compileSdkVersion 23
@@ -15,23 +14,20 @@ android {
         applicationId "com.jikexueyuan.animationseries"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode verCode
+        versionCode 1
         versionName APP_VERSION
     }
 
     signingConfigs {
         signingConfig {
-            //由于本地打包使用的是本机上的KeyStore
-            //而Jenkins打包用的是服务器上的KeyStore
-            //两个路径不一样
             if("true".equals(IS_JENKINS)){
-                storeFile file(JENKINS_FILE_PATH)
+                storeFile file(JENKINS_KEY_STORE)
             }else {
-                storeFile file(STORE_FILE_PATH)
+                storeFile file(LOCAL_KEY_STORE)
             }
-            storePassword '897577'
-            keyAlias "diaochan"
-            keyPassword '897577'
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+            storePassword STORE_PASSWORD
         }
     }
 
