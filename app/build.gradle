@@ -76,7 +76,8 @@ android {
                 //BUILD_PATH为服务器输出路径
                 outDirectory = BUILD_PATH
                 //AutoBuildTest-v1.0.1-xiaomi-release.apk
-                newName = 'AnimationSeries-v' + APP_VERSION + '-' + variant.productFlavors[0].name + '-' + variant.buildType.name + '.apk'
+//                newName = 'AnimationSeries-v' + APP_VERSION + '-' + variant.productFlavors[0].name + '-' + variant.buildType.name + '.apk'
+                newName = 'AnimationSeries.apk'
             } else {
                 //本机打包输出在本机路径
                 timeNow = getDate()
@@ -88,7 +89,8 @@ android {
                     newName = 'AnimationSeries-v' + APP_VERSION + '-' + variant.productFlavors[0].name + '-' + variant.buildType.name + '.apk'
                 }
             }
-            output.outputFile = new File(outDirectory+'/'+timeNow, newName)
+//            output.outputFile = new File(outDirectory+'/'+timeNow, newName)
+            output.outputFile = new File(outDirectory, newName)
         }
     }
 
