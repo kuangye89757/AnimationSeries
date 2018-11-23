@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.jikexueyuan.animationseries"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName APP_VERSION
@@ -20,9 +20,9 @@ android {
 
     signingConfigs {
         signingConfig {
-            if("true".equals(IS_JENKINS)){
+            if ("true".equals(IS_JENKINS)) {
                 storeFile file(JENKINS_KEY_STORE)
-            }else {
+            } else {
                 storeFile file(LOCAL_KEY_STORE)
             }
             keyAlias KEY_ALIAS
@@ -46,9 +46,9 @@ android {
     /**多渠道打包*/
     productFlavors {
 
-        channel{}
-        channel1{}
-        channel2{}
+        channel {}
+        channel1 {}
+        channel2 {}
 
         productFlavors.all {
             flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
@@ -83,7 +83,7 @@ android {
                     newName = 'AnimationSeries-v' + APP_VERSION + '-' + variant.productFlavors[0].name + '-' + variant.buildType.name + '.apk'
                 }
             }
-            output.outputFile = new File(outDirectory+'/'+timeNow, newName)
+            output.outputFile = new File(outDirectory + '/' + timeNow, newName)
 //            output.outputFile = new File(outDirectory, newName)
         }
     }

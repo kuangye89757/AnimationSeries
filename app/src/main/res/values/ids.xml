@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- tab -->
+    <item name="thumb_praise_id" type="id"></item>
+    <item name="circle_1" type="id"></item>
+    <item name="circle_2" type="id"></item>
+    <item name="circle_3" type="id"></item>
+    <item name="circle_4" type="id"></item>
+    <item name="circle_5" type="id"></item>
+    <item name="circle_6" type="id"></item>
+    <item name="circle_7" type="id"></item>
+    <item name="circle_8" type="id"></item>
+    <item name="circle_9" type="id"></item>
+    <item name="circle_10" type="id"></item>
+    <item name="circle_11" type="id"></item>
+    <item name="circle_12" type="id"></item>
+</resources>
